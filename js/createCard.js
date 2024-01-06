@@ -24,8 +24,20 @@ for(let i = 0; i < animes.length; i++) {
       <a href="#">
         <div class="w-full h-96 absolute -top-52 text-white flex justify-center items-center z-20 text-3xl hover:-top-16 ease-in-out duration-500"><i class="fa-solid fa-play"></i></div>
         <p class="font-inter z-10 text-white absolute bottom-0 p-2 w-full h-full flex items-end bg-gradient-to-b from-transparent to-black">${title}</p>
+        <div class="absolute z-30 right-2 top-2 px-2 py-1 rounded-full text-white bg-black/60 hover:text-zinc-400 ease-in duration-150 max-sm:hover:text-white">
+          <i class="fa-regular fa-bookmark pog"></i>
+        </div>
         <img class="w-full h-full rounded-xl" src="${img}" alt="">
       </a>
     </div>
   `
 }
+
+document.addEventListener('click', e => {
+  const el = e.target;
+
+  if(el.classList.contains('fa-regular')) {
+    el.classList.remove('fa-regular');
+    el.classList.add('fa-solid');
+  }
+})
