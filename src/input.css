@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box-shadow {
+  transition: all .3s;
+}
+
+.box-shadow:hover {
+  box-shadow: 0px 0px 15px 1px rgb(148, 163, 184);
+}
+
+#animeTrendContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.coluna {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+
+@font-face {
+  font-family: 'Logo';
+  src: url(../assets/font/DSFetteGotisch.ttf);
+}

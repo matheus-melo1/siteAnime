@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SufAnimes</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+  </head>
+  <body class="bg-slate-900">
+    <main class="flex w-full h-screen max-lg:flex-col">
+      <section class="p-5">
+        <nav class="text-3xl shrink-0 p-6 bg-slate-800 text-slate-600 rounded-xl flex flex-col justify-between items-center max-lg:flex-row h-full">
+          <div class="flex flex-col relative h-full max-lg:w-full max-lg:flex-row max-lg:items-center max-lg:justify-between gap-6 text-center">
+            <div class="flex text-center max-lg:translate-y-3 justify-center items-center text-4xl max-[420px]:text-3xl cursor-pointer text-white mb-4 hover:text-blue-400 ease-in duration-150">
+              <i class="fa-regular fa-planet-ringed"></i>
+            </div>
+            <div class="flex flex-col max-lg:flex-row gap-8 max-[420px]:text-3xl max-[400px]:text-2xl">
+              <p class="text-white">
+                <i class="fa-regular fa-border-all"></i>
+              </p>
+              <p>
+                <i class="fa-regular fa-film"></i>
+              </p>
+              <p>
+                <i class="fa-solid fa-bookmark"></i>
+              </p>
+            </div>
+            <div class="w-12 h-12 max-lg:w-14 max-lg:h-14 max-sm:w-12 max-sm:h-12 max-lg:-translate-x-0 absolute bottom-0 left-2/4 -translate-x-2/4 max-lg:static cursor-pointer">
+              <img class="w-full h-full rounded-full border-2 border-slate-600 box-shadow hover:border-slate-400 ease-in duration-150" src="https://i.pinimg.com/originals/1b/4f/ef/1b4fef961cb7d1edd171ee0aaa1a12b2.gif" alt="">
+            </div>
+          </div>
+        </nav>
+      </section>
+      <section class="pt-8 px-5 flex flex-col gap-12 w-[1740px] max-lg:w-full max-sm:w-screen h-screen overflow-y-scroll">
+        <div class="w-full font-inter text-white flex gap-4 max-lg:gap-7">
+          <label class="text-2xl max-lg:text-3xl" for=""><i class="fa-solid fa-magnifying-glass"></i></label>
+          <input class="bg-transparent w-full text-2xl max-lg:text-3xl outline-none" placeholder="Procurar" type="text">
+        </div>
+        <div class="flex flex-col gap-8 w-full">
+          <div>
+            <h1 class="text-3xl max-[528px]:text-2xl text-white font-poppins flex gap-4 items-center">
+              <i class="fa-solid fa-newspaper"></i> Episódios recém laçados
+            </h1>
+          </div>
+          <div class="flex gap-3 relative w-full">
+            <div class="absolute active:brightness-150 ease-in duration-150 top-2/4 -translate-y-2/4 z-10 px-3 py-1 bg-slate-500 cursor-pointer text-white rounded-full max-[430px]:hidden  -left-4 control arrow-left">
+              <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div id="animeTrendContainer" class="overflow-x-scroll">
+              <div id="animeTrend" class="flex flex-row flex-nowrap gap-5">
+
+              </div>
+            </div>
+            <div class="absolute active:brightness-150 ease-in duration-150 max-[430px]:hidden right-2 top-2/4 -translate-y-2/4 z-10 control rounded-full px-3 py-1 bg-slate-500 text-white cursor-pointer">
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 w-full">
+          <h1 class="text-3xl max-[528px]:text-2xl text-white font-poppins flex gap-4 items-center">
+            <i class="fa-solid fa-rectangle-history-circle-user"></i> Recomendados para você
+          </h1>
+          <div id="animesContainer" class="grid grid-cols-9 grid-rows-4 gap-y-4 max-2xl:grid-cols-6 max-xl:grid-cols-5 max-lg:grid-cols-4 max-lg:gap-6 max-md:grid-cols-3 max-sm:grid-cols-3 max-[528px]:grid-cols-2">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/anime.js"></script>
+    <script src="./js/createCard.js"></script>
+    <script src="./js/carousel.js"></script>
+  </body>
+</html>
