@@ -1,55 +1,61 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SufAnimes</title>
-    <link rel="stylesheet" href="./src/output.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
-  </head>
-  <body class="bg-slate-900">
-    <main class="flex w-full h-screen max-lg:flex-col">
-      <section id="navbar" class="p-5">
 
-      </section>
-      <section class="pt-8 px-5 flex flex-col gap-12 w-full max-lg:w-full max-sm:w-screen h-screen overflow-y-scroll">
-        <div class="w-full font-inter text-white flex gap-4 max-lg:gap-7">
-          <label class="text-2xl" for=""><i class="fa-solid fa-magnifying-glass"></i></label>
-          <input class="bg-transparent w-full text-2xl outline-none" placeholder="Procurar" type="text">
-        </div>
-        <div class="flex flex-col gap-8 w-full">
-          <div>
-            <h1 class="text-3xl max-[528px]:text-2xl text-white font-poppins flex gap-4 items-center">
-              <i class="fa-solid fa-newspaper"></i> Episódios recém laçados
-            </h1>
-          </div>
-          <div class="flex gap-3 relative w-full">
-            <div class="control arrow-left absolute active:brightness-150 ease-in duration-150 top-2/4 -translate-y-2/4 z-10 px-3 py-1 bg-slate-500 cursor-pointer text-white rounded-full max-[430px]:hidden -left-4">
-              <i class="fa-solid fa-angle-left"></i>
-            </div>
-            <div id="animeTrendContainer" class="overflow-x-scroll">
-              <div id="animeRecent" class="flex flex-row flex-nowrap gap-5">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SufAnimes</title>
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+</head>
 
-              </div>
-            </div>
-            <div class="absolute active:brightness-150 ease-in duration-150 max-[430px]:hidden right-2 top-2/4 -translate-y-2/4 z-10 control rounded-full px-3 py-1 bg-slate-500 text-white cursor-pointer">
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col gap-8 w-full">
+<body class="bg-slate-900">
+  <main class="flex w-full h-screen max-lg:flex-col">
+    <section id="navbar" class="p-5">
+
+    </section>
+    <section class="pt-8 px-5 flex flex-col gap-12 w-full max-lg:w-full max-sm:w-screen h-screen overflow-y-scroll">
+      <div class="w-full font-inter text-white flex gap-4 max-lg:gap-7">
+        <label class="text-2xl" for=""><i class="fa-solid fa-magnifying-glass"></i></label>
+        <input class="bg-transparent w-full text-2xl outline-none" placeholder="Procurar" type="text">
+      </div>
+      <div class="flex flex-col gap-8 w-full">
+        <div>
           <h1 class="text-3xl max-[528px]:text-2xl text-white font-poppins flex gap-4 items-center">
-            <i class="fa-solid fa-rectangle-history-circle-user"></i> Recomendados para você
+            <i class="fa-solid fa-newspaper"></i> Episódios recém laçados
           </h1>
-          <div id="animesContainer" class="grid grid-cols-9 grid-rows-4 gap-y-4 max-2xl:grid-cols-6 max-xl:grid-cols-5 max-lg:grid-cols-4 max-lg:gap-6 max-md:grid-cols-3 max-sm:grid-cols-3 max-[528px]:grid-cols-2">
-            
+        </div>
+        <div class="flex gap-3 relative w-full">
+          <div
+            class="control arrow-left absolute active:brightness-150 ease-in duration-150 top-2/4 -translate-y-2/4 z-10 px-3 py-1 bg-slate-500 cursor-pointer text-white rounded-full max-[430px]:hidden -left-4">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div id="animeTrendContainer" class="overflow-x-scroll">
+            <div id="animeRecent" class="flex flex-row flex-nowrap gap-5">
+
+            </div>
+          </div>
+          <div
+            class="absolute active:brightness-150 ease-in duration-150 max-[430px]:hidden right-2 top-2/4 -translate-y-2/4 z-10 control rounded-full px-3 py-1 bg-slate-500 text-white cursor-pointer">
+            <i class="fa-solid fa-angle-right"></i>
           </div>
         </div>
-      </section>
-    </main>
-    
-    <script type="module" src="./js/loadTemplate.js"></script>
-    <script type="module" src="./js/createCard.js"></script>
-    <script src="./js/carousel.js"></script>
-  </body>
+      </div>
+      <div class="flex flex-col gap-8 w-full">
+        <h1 class="text-3xl max-[528px]:text-2xl text-white font-poppins flex gap-4 items-center">
+          <i class="fa-solid fa-rectangle-history-circle-user"></i> Recomendados para você
+        </h1>
+        <div id="animesContainer"
+          class="grid grid-cols-9 grid-rows-4 gap-y-4 max-2xl:grid-cols-6 max-xl:grid-cols-5 max-lg:grid-cols-4 max-lg:gap-6 max-md:grid-cols-3 max-sm:grid-cols-3 max-[528px]:grid-cols-2">
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/createCard.js"></script>
+  <script src="./js/carousel.js"></script>
+</body>
+
 </html>

@@ -7,11 +7,11 @@ const initApp = () => {
   animes.forEach(animes => {
     container.innerHTML += `
       <div class="w-40 max-[528px]:w-full shrink-0 h-64 max-[528px]:h-72 rounded-xl relative hover:-translate-y-2 ease-in duration-200 overflow-hidden">
-        <a href="#">
+        <a href="/detail.html?id=${animes.id}">
           <div class="w-full h-96 absolute -top-52 text-white flex justify-center items-center z-20 text-3xl hover:-top-16 ease-in-out duration-500"><i class="fa-solid fa-play"></i></div>
           <p class="font-inter z-10 text-white absolute bottom-0 p-2 w-full h-full flex items-end bg-gradient-to-b from-transparent to-black">${animes.title}</p>
-          <div class="absolute z-30 right-2 top-2 px-2 py-1 rounded-full text-white bg-black/60 hover:text-zinc-400 ease-in duration-150 max-sm:hover:text-white">
-            <i class="fa-regular fa-bookmark pog"></i>
+          <div class="absolute z-30 right-2 top-2 px-2 py-1 rounded-full text-white bg-black/60 hover:text-red-400 ease-in duration-150 max-sm:hover:text-white">
+            <i class="fa-regular fa-heart"></i>
           </div>
           <img class="w-full h-full rounded-xl" src="${animes.img}" alt="">
         </a>
